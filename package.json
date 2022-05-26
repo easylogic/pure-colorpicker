@@ -1,6 +1,6 @@
 {
   "name": "@easylogic/pure-colorpicker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "simple colorpicker used anywhere",
   "main": "./dist/pure-colorpicker.umd.js",
   "module": "./dist/pure-colorpicker.es.js",
