@@ -1,0 +1,55 @@
+{
+  "name": "@easylogic/pure-colorpicker",
+  "version": "0.0.1",
+  "description": "simple colorpicker used anywhere",
+  "main": "./dist/pure-colorpicker.umd.js",
+  "module": "./dist/pure-colorpicker.es.js",
+  "exports": {
+    "./style.css": "./dist/style.css",
+    ".": {
+      "import": "./dist/pure-colorpicker.es.js",
+      "require": "./dist/pure-colorpicker.umd.js"
+    }
+  },
+  "scripts": {
+    "pub": "npm run build && npm publish",
+    "vite:dev": "vite --config=vite.config.js",
+    "vite:dist": "vite build --config=vite.dist.config.js",
+    "vite:dist:watch": "vite build --config=vite.dist.config.js --watch",
+    "vite:prod": "vite build --config=vite.prod.config.js && npm run copy:resource",
+    "release": "release-it *",
+    "copy:resource": "cp CNAME docs/",
+    "build": "npm run vite:prod && npm run vite:dist",
+    "build:watch": "npm run vite:dist:watch",
+    "dev": "npm run vite:dev",
+    "test": "vitest",
+    "docs": "http-server ./docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easylogic/pure-colorpicker.git"
+  },
+  "keywords": [
+    "colorview",
+    "colorpicker",
+    "imagefilter",
+    "color",
+    "rgb",
+    "webgl",
+    "chromdevtool",
+    "macos",
+    "sketch",
+    "palette"
+  ],
+  "author": "easylogic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/easylogic/pure-colorpicker/issues"
+  },
+  "homepage": "https://pure-colorpicker.easylogic.studio/",
+  "devDependencies": {
+    "release-it": "^15.0.0",
+    "vite": "^2.9.9",
+    "vitest": "^0.12.9"
+  }
+}
